@@ -1,0 +1,569 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ioDraw.com/3.5.1 Chrome/124.0.6367.49 Electron/30.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="第 1 页" id="Tu22BPDOzhlb_cb-vfvX">
+    <mxGraphModel dx="1877" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-1" value="外部环境 " style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-606" y="80" width="172" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-2" value="传感器层&#xa;GNSS&#xa;IMU&#xa;声呐&#xa;雷达&#xa;摄像头" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-457" y="164" width="126" height="137" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-3" value="预处理 / 多源融合" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-490" y="374" width="192" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-4" value="目标识别" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-456" y="496" width="124" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-5" value="态势评估 / 航迹·速度规划" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-516" y="618" width="244" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-6" value="舵角·推力解算 / 健康监控 / 链路管理" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-523" y="740" width="258" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-7" value="执行层&#xa;推进器&#xa;舵机&#xa;云台" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-570" y="880" width="110" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-8" value="无人艇艇体" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-667" y="1063" width="141" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-9" value="艇岸通信链路&#xa;4G / 卫星 / 备用遥控" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-316" y="897" width="212" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-10" value="地面站 / 人机环&#xa;任务规划·远程接管" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="-308" y="1054" width="196" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.79;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-1" target="-BoLavZ-mdTAkRrWx10j-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-394" y="139" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-12" value="S1 传感器-融合接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-2" target="-BoLavZ-mdTAkRrWx10j-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-13" value="S2 融合-识别接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-3" target="-BoLavZ-mdTAkRrWx10j-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-14" value="D1 识别-规划接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-4" target="-BoLavZ-mdTAkRrWx10j-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-15" value="C1 规划-舵推控制接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-5" target="-BoLavZ-mdTAkRrWx10j-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-16" value="C2 控制-执行器接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.36;exitY=0.99;entryX=0.73;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-6" target="-BoLavZ-mdTAkRrWx10j-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-471" y="843" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-17" value="C2 执行器反馈接口" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.1;entryX=0.06;entryY=0.99;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-7" target="-BoLavZ-mdTAkRrWx10j-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-633" y="843" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-18" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.7;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-7" target="-BoLavZ-mdTAkRrWx10j-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-515" y="1018" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-19" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.02;entryY=1;rounded=0;exitDx=0;exitDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-8" target="-BoLavZ-mdTAkRrWx10j-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-722" y="1018" />
+              <mxPoint x="-722" y="139" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-20" value="L1 艇岸链路接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.9;exitY=0.99;entryX=0.56;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-6" target="-BoLavZ-mdTAkRrWx10j-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-177" y="843" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-21" value="L1 艇岸链路接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.56;exitY=1;entryX=0.58;entryY=0.01;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-9" target="-BoLavZ-mdTAkRrWx10j-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-177" y="1018" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-22" value="L1 艇岸链路接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.15;exitY=0.01;entryX=0.24;entryY=1;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-10" target="-BoLavZ-mdTAkRrWx10j-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-354" y="1018" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-23" value="L1 艇岸链路接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.31;exitY=0;entryX=0.64;entryY=0.99;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-9" target="-BoLavZ-mdTAkRrWx10j-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-318" y="843" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-24" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=0.25;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-8" target="-BoLavZ-mdTAkRrWx10j-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-712" y="1028" />
+              <mxPoint x="-682" y="160" />
+              <mxPoint x="-452" y="130" />
+            </Array>
+            <mxPoint x="-657" y="1098" as="sourcePoint" />
+            <mxPoint x="-593" y="124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-25" value="外部环境 / 目标场景" style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="304" y="70" width="170" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-26" value="多模态传感器&#xa;光电红外&#xa;毫米波雷达&#xa;惯性测量单元" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="167" y="154" width="156" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-27" value="感知 / 融合&#xa;时间同步&#xa;空间配准&#xa;目标检测" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="174" y="329" width="142" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-28" value="卡尔曼跟踪" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="175" y="504" width="140" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-29" value="路径规划" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="183" y="626" width="124" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-30" value="避障 / 重定位" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="774" width="158" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-31" value="飞控系统&#xa;姿态控制&#xa;动力分配&#xa;健康监控" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="278" y="748" width="124" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-32" value="执行器&#xa;电调 / 电机&#xa;舵面&#xa;云台" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="503" y="922" width="142" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-33" value="无人机运动 / 姿态" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="561" y="1074" width="140" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-34" value="通信链路&#xa;4G / 卫星&#xa;遥控备用信道" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="183" y="931" width="156" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-35" value="地面站 / 遥控员" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="174" y="1074" width="174" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-36" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.15;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-25" target="-BoLavZ-mdTAkRrWx10j-26" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="245" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-37" value="U1 多传感器-融合接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-26" target="-BoLavZ-mdTAkRrWx10j-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-38" value="U2 融合-跟踪接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-27" target="-BoLavZ-mdTAkRrWx10j-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-39" value="U3 跟踪-规划接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=-0.01;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-28" target="-BoLavZ-mdTAkRrWx10j-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-40" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.19;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-29" target="-BoLavZ-mdTAkRrWx10j-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="149" y="711" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-41" value="F1 规划-飞控接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.81;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-29" target="-BoLavZ-mdTAkRrWx10j-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="711" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-42" value="F2 飞控-执行器接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.86;exitY=0.99;entryX=0;entryY=0.12;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-31" target="-BoLavZ-mdTAkRrWx10j-32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="886" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-43" value="F2 执行器-飞控反馈接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.59;exitY=0;entryX=1;entryY=0.7;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-32" target="-BoLavZ-mdTAkRrWx10j-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="596" y="886" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-44" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.3;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-32" target="-BoLavZ-mdTAkRrWx10j-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="574" y="1049" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-45" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.99;entryY=0.83;rounded=0;exitDx=0;exitDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-33" target="-BoLavZ-mdTAkRrWx10j-25" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="1070" />
+              <mxPoint x="704" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-46" value="L2 链路切换接口" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.74;entryX=0.07;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-31" target="-BoLavZ-mdTAkRrWx10j-34" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="123" y="886" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-47" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.43;exitY=1;entryX=0.45;entryY=0;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-34" target="-BoLavZ-mdTAkRrWx10j-35" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="241" y="1049" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-48" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.7;exitY=0;entryX=0.75;entryY=1;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-35" target="-BoLavZ-mdTAkRrWx10j-34" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="1049" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-49" value="L2 链路切换接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.51;exitY=0;entryX=0.14;entryY=0.99;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-34" target="-BoLavZ-mdTAkRrWx10j-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="264" y="886" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-50" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.694;exitY=-0.021;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-33" target="-BoLavZ-mdTAkRrWx10j-26" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="1040" />
+              <mxPoint x="714" y="139" />
+            </Array>
+            <mxPoint x="677" y="1084" as="sourcePoint" />
+            <mxPoint x="484" y="108" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-51" value="机载计算机" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.005847953216374269;verticalAlign=top;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-335" y="1287" width="770" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-52" value="飞控任务应用软件" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-320" y="1327" width="735" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-53" value="光电红外摄像机" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" parent="1" vertex="1">
+          <mxGeometry x="-550" y="1533.5" width="115" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-54" value="毫米波雷达" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" parent="1" vertex="1">
+          <mxGeometry x="-550" y="1593" width="115" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-55" value="惯性测量单元" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;perimeter=rectanglePerimeter;" parent="1" vertex="1">
+          <mxGeometry x="-550" y="1654.5" width="115" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-56" value="执行器" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" parent="1" vertex="1">
+          <mxGeometry x="535.25" y="1338" width="100" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-57" value="通信模块" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" parent="1" vertex="1">
+          <mxGeometry x="535.25" y="1487" width="95" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-58" value="无线链路" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" parent="1" vertex="1">
+          <mxGeometry x="535.25" y="1613" width="95" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-59" value="嵌入式OS" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-320" y="1719" width="745" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-60" value="机器学习框架" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-125" y="1664" width="220" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-61" value="时间同步&#xa;算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-306" y="1505" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-62" value="空间配准&#xa;算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="1367" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-63" value="目标检测&#xa;算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-95" y="1507" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-64" value="卡尔曼跟踪&#xa;算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="5" y="1367" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-65" value="路径规划&#xa;算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="125" y="1494" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-66" value="避障 / 重定位算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="318" y="1494" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-67" value="飞控控制&#xa;算法" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="302" y="1359.5" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-68" value="本地界面" style="whiteSpace=wrap;strokeWidth=2;cloneable=1;" parent="1" vertex="1">
+          <mxGeometry x="535.25" y="1697" width="99" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-69" value="1 光电红外图像&#xa;采集接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0;rounded=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-53" target="-BoLavZ-mdTAkRrWx10j-61" edge="1">
+          <mxGeometry x="-0.3472" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-385" y="1507" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-70" value="2 雷达点云&#xa;采集接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.49;entryX=0;entryY=0.5;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-54" target="-BoLavZ-mdTAkRrWx10j-61" edge="1">
+          <mxGeometry x="-0.3469" y="21" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-365" y="1607" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-71" value="3 惯性测量单元&#xa;数据采集接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.49;entryX=0;entryY=1;rounded=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-55" target="-BoLavZ-mdTAkRrWx10j-61" edge="1">
+          <mxGeometry x="-0.3808" y="-19" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-355" y="1647" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-72" value="4 同步-配准接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-61" target="-BoLavZ-mdTAkRrWx10j-62" edge="1">
+          <mxGeometry x="0.1569" y="19" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-255" y="1427" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-73" value="5 配准-检测接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=1;entryX=0;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-62" target="-BoLavZ-mdTAkRrWx10j-63" edge="1">
+          <mxGeometry x="-0.0085" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-85" y="1457" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-74" value="6 检测-跟踪接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0;entryX=0;entryY=1;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-63" target="-BoLavZ-mdTAkRrWx10j-64" edge="1">
+          <mxGeometry x="-0.0016" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-75" value="7 跟踪-规划接口" style="curved=1;startArrow=none;endArrow=block;entryX=0.5;entryY=0;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-64" target="-BoLavZ-mdTAkRrWx10j-65" edge="1">
+          <mxGeometry x="-0.0044" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="125" y="1457" />
+            </Array>
+            <mxPoint x="125" y="1417" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-76" value="8 航迹-避障接口" style="curved=1;startArrow=block;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;startFill=1;" parent="1" source="-BoLavZ-mdTAkRrWx10j-65" target="-BoLavZ-mdTAkRrWx10j-66" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-77" value="9 航迹指令接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.14;entryX=0;entryY=0.5;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-65" target="-BoLavZ-mdTAkRrWx10j-67" edge="1">
+          <mxGeometry x="-0.0035" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="1407" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-78" value="10 飞控-执行器&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.13;entryX=0;entryY=0.32;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-67" target="-BoLavZ-mdTAkRrWx10j-56" edge="1">
+          <mxGeometry x="0.4419" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="485" y="1297" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-79" value="11 执行器反馈&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.64;entryX=1;entryY=0.33;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-56" target="-BoLavZ-mdTAkRrWx10j-67" edge="1">
+          <mxGeometry x="-0.2833" y="12" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="1387" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-80" value="12 飞控-通信接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.6;entryX=0;entryY=0.49;rounded=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-67" target="-BoLavZ-mdTAkRrWx10j-57" edge="1">
+          <mxGeometry x="0.352" y="18" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-81" value="13 通信-链路接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.75;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-57" target="-BoLavZ-mdTAkRrWx10j-58" edge="1">
+          <mxGeometry x="-0.5925" y="-26" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="1557" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-82" value="14 链路-通信接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=0.25;entryY=1;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-58" target="-BoLavZ-mdTAkRrWx10j-57" edge="1">
+          <mxGeometry x="-0.1791" y="12" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="525" y="1567" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-83" value="15 数据存档接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;entryX=0.912;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-66" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="0.5129" relative="1" as="geometry">
+            <mxPoint x="1255" y="1737" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="385" y="1647" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-84" value="16 可视化服务接口" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=1;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-66" target="-BoLavZ-mdTAkRrWx10j-68" edge="1">
+          <mxGeometry x="0.6319" y="34" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="455" y="1707" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-85" value="17 时间同步-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.085;entryY=-0.056;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-61" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="0.3411" y="-4" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-285" y="1647" />
+            </Array>
+            <mxPoint x="-217" y="1529" as="sourcePoint" />
+            <mxPoint x="-178" y="1445" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-86" value="18 时间同步-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.141;entryY=0.035;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-62" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="-0.4731" y="29" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-215" y="1537" />
+            </Array>
+            <mxPoint x="-245" y="1597" as="sourcePoint" />
+            <mxPoint x="-282" y="1732" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-87" value="19 目标检测-ML&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.172;entryY=-0.005;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-63" target="-BoLavZ-mdTAkRrWx10j-60" edge="1">
+          <mxGeometry x="-0.2311" y="2" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-85" y="1617" />
+            </Array>
+            <mxPoint x="-122" y="1445" as="sourcePoint" />
+            <mxPoint x="-73" y="1529" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-88" value="20 目标检测-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.197;entryY=0.035;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-63" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="-0.3363" y="-9" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-165" y="1617" />
+            </Array>
+            <mxPoint x="-122" y="1445" as="sourcePoint" />
+            <mxPoint x="-73" y="1529" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-89" value="21 跟踪-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.659;entryY=-0.01;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-64" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="-0.4058" y="4" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="45" y="1567" />
+            </Array>
+            <mxPoint x="-45" y="1597" as="sourcePoint" />
+            <mxPoint x="-72" y="1674" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-90" value="24 避障-ML&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=1;entryX=0.541;entryY=-0.053;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-66" target="-BoLavZ-mdTAkRrWx10j-60" edge="1">
+          <mxGeometry x="0.6949" y="-10" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="255" y="1627" />
+              <mxPoint x="15" y="1617" />
+            </Array>
+            <mxPoint x="55" y="1457" as="sourcePoint" />
+            <mxPoint x="181" y="1729" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-91" value="25 飞控-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=1;entryX=0.75;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-67" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="-0.6186" y="15" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="1477" />
+            </Array>
+            <mxPoint x="340" y="1585" as="sourcePoint" />
+            <mxPoint x="20" y="1672" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-92" value="23 避障-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;exitX=0.261;exitY=0.949;entryX=0.798;entryY=-0.033;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-66" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="-0.3126" y="1" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="1657" />
+            </Array>
+            <mxPoint x="340" y="1585" as="sourcePoint" />
+            <mxPoint x="20" y="1672" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-93" value="22 规划-OS&#xa;接口" style="curved=1;startArrow=none;endArrow=block;entryX=0.703;entryY=0.081;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="-BoLavZ-mdTAkRrWx10j-65" target="-BoLavZ-mdTAkRrWx10j-59" edge="1">
+          <mxGeometry x="0.1935" y="17" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="1647" />
+            </Array>
+            <mxPoint x="165" y="1577" as="sourcePoint" />
+            <mxPoint x="147" y="1529" as="targetPoint" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-94" value="" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.16666666666666666;" parent="1" vertex="1">
+          <mxGeometry x="-523" y="1328.5" width="35" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-95" value="" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-518" y="1397.5" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-96" value="" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="-523" y="1362.5" width="35" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-97" value="图例" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-555.5" y="1280" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-98" value="硬件单元" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=0;verticalAlign=middle;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-481" y="1318.5" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-99" value="软件单元" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=0;verticalAlign=middle;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-481" y="1352.5" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-100" value="算法单元" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=0;verticalAlign=middle;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-481" y="1390" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-101" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-522" y="1447" as="sourcePoint" />
+            <mxPoint x="-485" y="1447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BoLavZ-mdTAkRrWx10j-102" value="接口" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=0;verticalAlign=middle;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-481" y="1425.5" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
